@@ -61,19 +61,25 @@ export function GithubView() {
                 GitHub contributions could not be loaded. Check the API environment variables.
               </p>
             )}
-            <div className="my-4 grid max-w-[570px] grid-cols-13 gap-1 max-[720px]:gap-0.5">
-              {calendar?.weeks.flatMap((week) =>
-                week.contributionDays.map((day) => (
-                  <i
-                    key={day.date}
-                    className="aspect-square"
-                    title={`${day.contributionCount} contributions on ${day.date}`}
-                    style={{ background: day.color }}
-                  />
-                )),
-              )}
+
+            <div className="my-4 max-w-full overflow-x-auto pb-1">
+              <div className="flex min-w-max items-start gap-1">
+                {calendar?.weeks.map((week, weekIndex) => (
+                  <div key={weekIndex} className="flex flex-col gap-1">
+                    {week.contributionDays.map((day) => (
+                      <i
+                        key={day.date}
+                        className="block h-2.5 w-2.5 rounded-[2px]"
+                        title={`${day.contributionCount} contributions on ${day.date}`}
+                        style={{ background: day.color }}
+                      />
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className={`flex justify-end gap-1 text-[10px] text-[var(--muted)] ${mono}`}><span className="mr-1">Less</span>{levels.map((opacity) => <i key={opacity} className="h-2.5 w-2.5" style={{ background: `color-mix(in srgb, var(--accent) ${opacity}%, var(--panel-2))` }} />)}<span className="ml-1">More</span></div>
+
+            <div className={`flex justify-end gap-1 text-[10px] text-[var(--muted)] ${mono}`}><span className="mr-1">Less</span>{levels.map((opacity) => <i key={opacity} className="h-2.5 w-2.5 rounded-[2px]" style={{ background: `color-mix(in srgb, var(--accent) ${opacity}%, var(--panel-2))` }} />)}<span className="ml-1">More</span></div>
           </div>
           <a className="inline-flex items-center gap-3 border px-3.5 py-2 text-xs text-[var(--text)] hover:border-[var(--accent)]" href="https://github.com/sarbojitdutta" rel="noreferrer" target="_blank"><Code2 size={16} /> Visit full GitHub profile <ExternalLink size={14} /></a>
         </div>
