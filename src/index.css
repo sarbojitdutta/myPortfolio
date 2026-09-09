@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #d4d4d4;
+  background: #1e1e1e;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --bg: #1e1e1e;
+  --panel: #181818;
+  --panel-2: #252526;
+  --editor: #1e1e1e;
+  --tab: #2d2d2d;
+  --border: #333333;
+  --border-soft: #272727;
+  --text: #d4d4d4;
+  --muted: #858585;
+  --faint: #565656;
+  --accent: #4ec9b0;
+  --blue: #569cd6;
+  --purple: #c586c0;
+  --yellow: #dcdcaa;
+  --orange: #ce9178;
+  --green: #6a9955;
+  --status: #1665a5;
+}
+
+:root[data-theme='dracula'] {
+  --bg: #282a36; --panel: #21222c; --panel-2: #44475a; --editor: #282a36; --tab: #343746;
+  --border: #44475a; --border-soft: #343746; --text: #f8f8f2; --muted: #a8a8b3; --faint: #6272a4;
+  --accent: #50fa7b; --blue: #8be9fd; --purple: #bd93f9; --yellow: #f1fa8c; --orange: #ffb86c; --green: #6272a4; --status: #66539b;
+}
+:root[data-theme='monokai'] {
+  --bg: #272822; --panel: #1f201b; --panel-2: #3e3d32; --editor: #272822; --tab: #33342b;
+  --border: #49483e; --border-soft: #383830; --text: #f8f8f2; --muted: #a6a690; --faint: #75715e;
+  --accent: #a6e22e; --blue: #66d9ef; --purple: #ae81ff; --yellow: #e6db74; --orange: #fd971f; --green: #75715e; --status: #537b37;
+}
+:root[data-theme='light-plus'] {
+  --bg: #f3f3f3; --panel: #ebebeb; --panel-2: #e7e7e7; --editor: #ffffff; --tab: #ececec;
+  --border: #d0d0d0; --border-soft: #e1e1e1; --text: #333333; --muted: #6b6b6b; --faint: #999999;
+  --accent: #008080; --blue: #0451a5; --purple: #af00db; --yellow: #795e26; --orange: #a31515; --green: #008000; --status: #007acc;
+}
+:root[data-theme='solarized'] {
+  --bg: #fdf6e3; --panel: #eee8d5; --panel-2: #e5dfca; --editor: #fdf6e3; --tab: #eee8d5;
+  --border: #d8d0bc; --border-soft: #e8e0ce; --text: #586e75; --muted: #839496; --faint: #a6a095;
+  --accent: #2aa198; --blue: #268bd2; --purple: #6c71c4; --yellow: #b58900; --orange: #cb4b16; --green: #859900; --status: #657b83;
+}
+:root[data-theme='github'] {
+  --bg: #f6f8fa; --panel: #f0f2f4; --panel-2: #e7ebef; --editor: #ffffff; --tab: #f6f8fa;
+  --border: #d0d7de; --border-soft: #eaeef2; --text: #24292f; --muted: #57606a; --faint: #8c959f;
+  --accent: #1a7f37; --blue: #0969da; --purple: #8250df; --yellow: #9a6700; --orange: #bc4c00; --green: #1a7f37; --status: #0969da;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input, textarea { font: inherit; }
+button { cursor: pointer; }
+#root { min-height: 100vh; }
+@keyframes editor-reveal { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes cursor-blink { 50% { opacity: 0; } }
