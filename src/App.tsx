@@ -17,6 +17,7 @@ function App() {
     return (localStorage.getItem('portfolio-theme') as ThemeName) || 'dark-plus'
   })
   const [explorerOpen, setExplorerOpen] = useState(true)
+  const [explorerWidth, setExplorerWidth] = useState(224)
   const [mobileNav, setMobileNav] = useState(false)
 
   useEffect(() => {
@@ -30,6 +31,10 @@ function App() {
     setOpenTabs((tabs) => (tabs.includes(file) ? tabs : [...tabs, file]))
     setActive(file)
     setMobileNav(false)
+  }
+
+  const toggleSettings = () => {
+    setActive((current) => (current === 'settings' ? 'Home.tsx' : 'settings'))
   }
 
   const closeTab = (file: FileName) => {
@@ -47,8 +52,8 @@ function App() {
     <main className="flex h-screen flex-col overflow-hidden bg-[var(--bg)] text-[var(--text)] transition-colors duration-200">
       <TitleBar />
       <div className="flex min-h-0 flex-1">
-        <ActivityBar active={active} mobileNav={mobileNav} onSettings={() => setActive('settings')} openFile={openFile} setMobileNav={setMobileNav} />
-        <Explorer active={active} isOpen={explorerOpen} openFile={openFile} setIsOpen={setExplorerOpen} />
+        <ActivityBar active={active} mobileNav={mobileNav} onSettings={toggleSettings} openFile={openFile} setMobileNav={setMobileNav} />
+        <Explorer active={active} isOpen={explorerOpen} width={explorerWidth} openFile={openFile} setIsOpen={setExplorerOpen} setWidth={setExplorerWidth} />
         <section className="flex min-w-0 flex-1 flex-col bg-[var(--editor)]">
           <TabBar active={active} closeTab={closeTab} openFile={openFile} tabs={openTabs} />
           <div className="min-h-0 flex-1 overflow-auto">
