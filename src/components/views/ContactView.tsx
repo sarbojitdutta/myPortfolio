@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import { Code2, Mail } from 'lucide-react'
-import { CodeHeader, mono, PageView, border } from './shared'
+import { CodeHeader, mono, PageView } from './shared'
 
 export function ContactView() {
-  const [sent, setSent] = useState(false)
 
   return (
     <PageView>
