@@ -44,7 +44,7 @@ export function AboutView() {
             <h2 className="my-4 text-3xl leading-tight text-[var(--text)] sm:text-4xl">Building with curiosity.</h2>
             <p className="max-w-2xl text-sm leading-loose text-[var(--muted)]">I’m a Full Stack Developer and IT student who enjoys turning ideas into useful products. I started with web development because I liked seeing an idea become something people could actually use. As I explored AI, that curiosity shifted toward how applications can reason over information instead of simply generating text. That led me to LLM tooling, retrieval systems, and Graph RAG — and projects like Lexis became a way to explore those ideas in practice.</p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="/resume.pdf" download className="inline-flex items-center gap-2 border border-[var(--accent)] bg-[var(--accent)] px-4 py-2.5 text-xs font-semibold text-[var(--bg)] transition-opacity hover:opacity-90"><ArrowDownToLine size={15} /> Download Resume</a>
+              <a href="/Sarbojit_Resume(v2).pdf" download className="inline-flex items-center gap-2 border border-[var(--accent)] bg-[var(--accent)] px-4 py-2.5 text-xs font-semibold text-[var(--bg)] transition-opacity hover:opacity-90"><ArrowDownToLine size={15} /> Download Resume</a>
               <a href="mailto:sarbojitd48@gmail.com" className="inline-flex items-center gap-2 border px-4 py-2.5 text-xs text-[var(--muted)] transition-colors hover:border-[var(--accent)] hover:text-[var(--text)]">Email me</a>
             </div>
           </section>
