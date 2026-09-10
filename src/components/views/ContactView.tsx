@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Terminal } from 'lucide-react'
+import { Github, Linkedin, Mail } from 'lucide-react'
 import { CodeHeader, mono, PageView } from './shared'
 
 export function ContactView() {
@@ -6,60 +6,78 @@ export function ContactView() {
     <PageView>
       <CodeHeader>
         <span className="text-[var(--accent)]">contact.ts</span>
-        <span className="text-[var(--muted)]"> — </span>
-        <span className="text-[var(--green)]">get in touch</span>
       </CodeHeader>
 
-      <div className="max-w-[820px]">
-        <div className="overflow-hidden rounded-lg border border-[var(--border)] bg-[var(--panel-2)] shadow-lg">
-          <div className="flex items-center gap-2 border-b border-[var(--border)] px-4 py-2.5">
-            <span className="h-2.5 w-2.5 rounded-full bg-[var(--red)]" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[var(--orange)]" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[var(--green)]" />
-            <div className={`ml-2 flex items-center gap-2 text-sm text-[var(--muted)] ${mono}`}>
-              <Terminal size={15} />
-              contact.ts
-            </div>
+      <div className="max-w-[850px]">
+        <div className={`mb-8 text-sm font-semibold tracking-[0.2em] text-[var(--muted)] sm:text-base ${mono}`}>
+          CONTACT
+        </div>
+
+        <div className={`space-y-2 text-base leading-relaxed sm:text-lg md:text-xl ${mono}`}>
+          <div>
+            <span className="text-[var(--blue)]">const</span>{' '}
+            <span className="text-[var(--accent)]">developer</span>{' '}
+            <span className="text-[var(--muted)]">=</span>{' '}
+            <span className="text-[var(--text)]">{'{'}</span>
           </div>
 
-          <div className={`p-7 text-base leading-relaxed sm:p-9 sm:text-lg ${mono}`}>
-            <div className="mb-7">
-              <span className="text-[var(--muted)]">$ </span>
-              <span className="text-[var(--accent)]">whoami</span>
-            </div>
-
-            <div className="mb-8 pl-4 text-[var(--text)]">
-              <div><span className="text-[var(--blue)]">name</span><span className="text-[var(--muted)]">:</span> Sarbojit Dutta</div>
-              <div><span className="text-[var(--blue)]">role</span><span className="text-[var(--muted)]">:</span> Full Stack Web Developer</div>
-              <div><span className="text-[var(--blue)]">status</span><span className="text-[var(--muted)]">:</span> <span className="text-[var(--green)]">open to opportunities</span></div>
-            </div>
-
-            <div className="mb-6">
-              <span className="text-[var(--muted)]">$ </span>
-              <span className="text-[var(--accent)]">contact</span>
-              <span className="text-[var(--text)]"> --email --social</span>
-            </div>
-
-            <div className="grid gap-3 border-l-2 border-[var(--accent)] pl-5 sm:pl-6">
-              <a href="mailto:sarbojitd48@gmail.com" className="group flex items-center gap-3 text-[var(--text)] transition-colors hover:text-[var(--accent)]">
-                <Mail size={20} className="shrink-0 text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]" />
-                <span>sarbojitd48@gmail.com</span>
-              </a>
-              <a href="https://github.com/sarbojitdutta" target="_blank" rel="noreferrer" className="group flex items-center gap-3 text-[var(--text)] transition-colors hover:text-[var(--accent)]">
-                <Github size={20} className="shrink-0 text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]" />
-                <span>github.com/sarbojitdutta</span>
-              </a>
-              <a href="https://www.linkedin.com/in/sarbojitdutta/" target="_blank" rel="noreferrer" className="group flex items-center gap-3 text-[var(--text)] transition-colors hover:text-[var(--accent)]">
-                <Linkedin size={20} className="shrink-0 text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]" />
-                <span>linkedin.com/in/sarbojitdutta</span>
-              </a>
-            </div>
-
-            <div className="mt-8 text-[var(--muted)]">
-              <span className="text-[var(--green)]">✓</span> Thanks for stopping by.
-              <span className="ml-1 animate-pulse text-[var(--accent)]">▊</span>
-            </div>
+          <div className="pl-5 sm:pl-8">
+            <span className="text-[var(--blue)]">name</span>
+            <span className="text-[var(--muted)]">: </span>
+            <span className="text-[var(--green)]">&quot;Sarbojit Dutta&quot;</span>
+            <span className="text-[var(--muted)]">,</span>
           </div>
+
+          <div className="pl-5 sm:pl-8">
+            <span className="text-[var(--blue)]">role</span>
+            <span className="text-[var(--muted)]">: </span>
+            <span className="text-[var(--green)]">&quot;Full Stack Developer&quot;</span>
+            <span className="text-[var(--muted)]">,</span>
+          </div>
+
+          <div className="pl-5 sm:pl-8">
+            <span className="text-[var(--blue)]">status</span>
+            <span className="text-[var(--muted)]">: </span>
+            <span className="text-[var(--green)]">&quot;Open to opportunities&quot;</span>
+          </div>
+
+          <div className="text-[var(--text)]">{' };'}</div>
+
+          <div className="pt-6">
+            <span className="text-[var(--accent)]">connect</span>
+            <span className="text-[var(--text)]">({'{'}</span>
+          </div>
+
+          <div className="pl-5 sm:pl-8">
+            <a href="mailto:sarbojitd48@gmail.com" className="group inline-flex items-center gap-2 hover:text-[var(--accent)]">
+              <Mail size={18} className="shrink-0 text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]" />
+              <span className="text-[var(--blue)]">email</span>
+              <span className="text-[var(--muted)]">: </span>
+              <span className="text-[var(--green)] group-hover:text-[var(--accent)]">&quot;sarbojitd48@gmail.com&quot;</span>
+            </a>
+            <span className="text-[var(--muted)]">,</span>
+          </div>
+
+          <div className="pl-5 sm:pl-8">
+            <a href="https://github.com/sarbojitdutta" target="_blank" rel="noreferrer" className="group inline-flex items-center gap-2 hover:text-[var(--accent)]">
+              <Github size={18} className="shrink-0 text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]" />
+              <span className="text-[var(--blue)]">github</span>
+              <span className="text-[var(--muted)]">: </span>
+              <span className="text-[var(--green)] group-hover:text-[var(--accent)]">&quot;github.com/sarbojitdutta&quot;</span>
+            </a>
+            <span className="text-[var(--muted)]">,</span>
+          </div>
+
+          <div className="pl-5 sm:pl-8">
+            <a href="https://linkedin.com/in/sarbojitdutta" target="_blank" rel="noreferrer" className="group inline-flex items-center gap-2 hover:text-[var(--accent)]">
+              <Linkedin size={18} className="shrink-0 text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]" />
+              <span className="text-[var(--blue)]">linkedin</span>
+              <span className="text-[var(--muted)]">: </span>
+              <span className="text-[var(--green)] group-hover:text-[var(--accent)]">&quot;linkedin.com/in/sarbojitdutta&quot;</span>
+            </a>
+          </div>
+
+          <div className="text-[var(--text)]">{' });'}</div>
         </div>
       </div>
     </PageView>
