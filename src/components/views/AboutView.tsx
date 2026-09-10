@@ -60,7 +60,16 @@ export function AboutView() {
         <span className="text-[var(--purple)]">&lt;</span>
         <span className="text-[var(--purple)]">section</span>{' '}<span className="text-[var(--blue)]">id</span>=<span className="text-[var(--orange)]">&quot;about&quot;</span><span className="text-[var(--purple)]">&gt;</span>
       </CodeHeader>
-      <div className={`max-w-[800px] border ${border}`}><div className={`flex h-[30px] items-center gap-1 px-3 ${mono} text-[10px] text-[var(--faint)] bg-[var(--panel-2)]`}><span className="h-1.5 w-1.5 rounded-full bg-[var(--faint)]" /><span className="h-1.5 w-1.5 rounded-full bg-[var(--faint)]" /><span className="h-1.5 w-1.5 rounded-full bg-[var(--faint)]" /><b className="ml-3 font-normal">localhost:5173/about.html</b></div><div className="p-[60px] max-[720px]:p-8"><span className={`text-[10px] uppercase tracking-widest text-[var(--accent)] ${mono}`}>ABOUT / 2026</span><h2 className="my-4 text-3xl text-[var(--text)]">Building with curiosity.</h2><p className="text-sm leading-loose text-[var(--muted)]">final year IT student at Asansol Engineering College, expected graduation June 2027.</p><SkillsMarquee /></div></div>
+      <div className={`max-w-[800px] border ${border}`}>
+        <div className={`flex h-[30px] items-center gap-1 px-3 ${mono} text-[10px] text-[var(--faint)] bg-[var(--panel-2)]`}>
+          <span className="h-1.5 w-1.5 rounded-full bg-[var(--faint)]" /><span className="h-1.5 w-1.5 rounded-full bg-[var(--faint)]" /><span className="h-1.5 w-1.5 rounded-full bg-[var(--faint)]" /><b className="ml-3 font-normal">localhost:5173/about.html</b>
+        </div>
+        <div className="p-[60px] max-[720px]:p-8">
+          <span className={`text-[10px] uppercase tracking-widest text-[var(--accent)] ${mono}`}>ABOUT / 2026</span><h2 className="my-4 text-3xl text-[var(--text)]">Building with curiosity.</h2>
+          <p className="text-sm leading-loose text-[var(--muted)]">I’m a Full Stack Developer and final-year IT student, building modern web apps and AI-powered solutions, graduating in 2027.
+          </p><SkillsMarquee />
+        </div>
+      </div>
       <div className={`mt-12 text-xs text-[var(--purple)] ${mono}`}>&lt;/section&gt;</div>
     </PageView>
   )
