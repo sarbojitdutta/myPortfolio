@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { BrowserRouter, Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import { ActivityBar } from './components/layout/ActivityBar'
 import { Explorer } from './components/layout/Explorer'
+import { NavBar } from './components/layout/NavBar'
 import { StatusBar } from './components/layout/StatusBar'
 import { TabBar } from './components/layout/TabBar'
 import { TitleBar } from './components/layout/TitleBar'
@@ -35,6 +36,12 @@ function PortfolioShell() {
     localStorage.setItem('portfolio-theme', theme)
   }, [theme])
 
+  useEffect(() => {
+    if (active !== 'settings') {
+      setOpenTabs((tabs) => (tabs.includes(active) ? tabs : [...tabs, active]))
+    }
+  }, [active])
+
   const openFile = (file: FileName) => {
     setOpenTabs((tabs) => (tabs.includes(file) ? tabs : [...tabs, file]))
     navigate(fileToRoute(file))
@@ -57,10 +64,15 @@ function PortfolioShell() {
     }
   }
 
+  const toggleExplorer = () => {
+    setExplorerOpen((open) => !open)
+  }
+
   return (
     <main className="flex h-screen flex-col overflow-hidden bg-[var(--bg)] text-[var(--text)] transition-colors duration-200">
       <RouteTitle />
       <TitleBar />
+      <NavBar onToggleExplorer={toggleExplorer} onOpenSettings={toggleSettings} />
       <div className="flex min-h-0 flex-1">
         <ActivityBar active={active} mobileNav={mobileNav} onSettings={toggleSettings} openFile={openFile} setMobileNav={setMobileNav} />
         <Explorer active={active} isOpen={explorerOpen} width={explorerWidth} openFile={openFile} setIsOpen={setExplorerOpen} setWidth={setExplorerWidth} />
