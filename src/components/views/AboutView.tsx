@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { PanelsTopLeft } from 'lucide-react'
 import { CodeHeader, mono, border, PageView } from './shared'
 
-const skills = ['React', 'TypeScript', 'Python', 'FastAPI', 'Node.js', 'PostgreSQL', 'Graph RAG', 'Git']
+const skills = ['React','Next.js' , 'TypeScript', 'JavaScript', 'Python', 'RESTAPI', 'FAST API', 'Node.js', 'SQL', 'RAG', 'Git']
 
 export function AboutView() {
   const [preview, setPreview] = useState(false)

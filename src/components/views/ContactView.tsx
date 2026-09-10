@@ -1,4 +1,5 @@
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Mail } from 'lucide-react'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { CodeHeader, mono, PageView } from './shared'
 
 export function ContactView() {
@@ -13,7 +14,7 @@ export function ContactView() {
           CONTACT
         </div>
 
-        <div className={`space-y-2 text-base leading-relaxed sm:text-lg md:text-xl ${mono}`}>
+        <div className={`space-y-2 text-base leading-relaxed sm:text-md md:text-sm ${mono}`}>
           <div>
             <span className="text-[var(--blue)]">const</span>{' '}
             <span className="text-[var(--accent)]">developer</span>{' '}
@@ -60,7 +61,7 @@ export function ContactView() {
 
           <div className="pl-5 sm:pl-8">
             <a href="https://github.com/sarbojitdutta" target="_blank" rel="noreferrer" className="group inline-flex items-center gap-2 hover:text-[var(--accent)]">
-              <Github size={18} className="shrink-0 text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]" />
+              <FaGithub size={18} className="shrink-0 text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]" />
               <span className="text-[var(--blue)]">github</span>
               <span className="text-[var(--muted)]">: </span>
               <span className="text-[var(--green)] group-hover:text-[var(--accent)]">&quot;github.com/sarbojitdutta&quot;</span>
@@ -70,7 +71,7 @@ export function ContactView() {
 
           <div className="pl-5 sm:pl-8">
             <a href="https://linkedin.com/in/sarbojitdutta" target="_blank" rel="noreferrer" className="group inline-flex items-center gap-2 hover:text-[var(--accent)]">
-              <Linkedin size={18} className="shrink-0 text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]" />
+              <FaLinkedin size={18} className="shrink-0 text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]" />
               <span className="text-[var(--blue)]">linkedin</span>
               <span className="text-[var(--muted)]">: </span>
               <span className="text-[var(--green)] group-hover:text-[var(--accent)]">&quot;linkedin.com/in/sarbojitdutta&quot;</span>
