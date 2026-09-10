@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Code2, Mail } from 'lucide-react'
 import { CodeHeader, mono, PageView } from './shared'
 
