@@ -1,12 +1,12 @@
 import { FileCode2 } from 'lucide-react'
-import { SiCss3, SiHtml5, SiMarkdown, SiReact, SiTypescript } from 'react-icons/si'
+import { SiCss, SiHtml5, SiMarkdown, SiReact, SiTypescript } from 'react-icons/si'
 import type { IconType } from 'react-icons'
 import type { FileIconKind } from '../../types/portfolio'
 
 const icons: Record<FileIconKind, IconType> = {
   tsx: SiReact,
   html: SiHtml5,
-  css: SiCss3,
+  css: SiCss,
   ts: SiTypescript,
   md: SiMarkdown,
 }
