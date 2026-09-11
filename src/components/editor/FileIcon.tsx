@@ -1,8 +1,9 @@
 import { FileCode2 } from 'lucide-react'
 import { SiCss3, SiHtml5, SiMarkdown, SiReact, SiTypescript } from 'react-icons/si'
+import type { IconType } from 'react-icons'
 import type { FileIconKind } from '../../types/portfolio'
 
-const icons: Record<FileIconKind, typeof FileCode2> = {
+const icons: Record<FileIconKind, IconType> = {
   tsx: SiReact,
   html: SiHtml5,
   css: SiCss3,
@@ -19,7 +20,11 @@ const colors: Record<FileIconKind, string> = {
 }
 
 export function FileIcon({ kind }: { kind: FileIconKind }) {
-  const Icon = icons[kind] || FileCode2
+  const Icon = icons[kind]
+
+  if (!Icon) {
+    return <FileCode2 size={16} className="shrink-0 text-[var(--muted)]" aria-hidden="true" />
+  }
 
   return (
     <span className={`inline-flex w-6 shrink-0 items-center justify-center ${colors[kind]}`}>
