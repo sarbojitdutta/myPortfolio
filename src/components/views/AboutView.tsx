@@ -51,13 +51,18 @@ export function AboutView() {
 
           <section className="border-t pt-8" style={{ borderColor: 'var(--border)' }}>
             <SectionTitle>EDUCATION</SectionTitle>
-            <div className="flex gap-4"><div className="mt-1 h-8 w-1 shrink-0 bg-[var(--accent)]" /><div><h4 className="text-base font-semibold text-[var(--text)]">Asansol Engineering College</h4><p className="mt-1 text-sm text-[var(--muted)]">B.Tech — Computer Science &amp; Information Technology</p><p className={`mt-2 text-xs text-[var(--faint)] ${mono}`}>Expected graduation: June 2027</p></div></div>
+            <div className="flex gap-4">
+              <div className="mt-1 h-8 w-1 shrink-0 bg-[var(--accent)]" />
+              <div>
+                <h4 className="text-base font-semibold text-[var(--text)]">Asansol Engineering College</h4><p className="mt-1 text-sm text-[var(--muted)]">B.Tech — Information Technology</p><p className={`mt-2 text-xs text-[var(--faint)] ${mono}`}>Expected graduation: June 2027</p>
+              </div>
+            </div>
           </section>
 
           <section className="border-t pt-8" style={{ borderColor: 'var(--border)' }}>
             <SectionTitle>JOURNEY / MILESTONES</SectionTitle>
             <div className="grid gap-4 md:grid-cols-3">
-              {[['2024', 'Started development', 'Learned the fundamentals of programming and web development.'], ['2025', 'Built Lexis', 'Explored LLMs, retrieval and Graph RAG through a legal-tech project.'], ['2026', 'Built CognitoFlow', 'Combined full-stack engineering with AI-powered GitHub workflows.']].map(([year, title, description]) => <div key={year} className="border p-4 transition-colors hover:border-[var(--accent)]" style={{ borderColor: 'var(--border)' }}><span className={`text-lg font-bold text-[var(--accent)] ${mono}`}>{year}</span><h4 className="mt-3 text-sm font-semibold text-[var(--text)]">{title}</h4><p className="mt-2 text-xs leading-relaxed text-[var(--muted)]">{description}</p></div>)}
+              {[['2024', 'Started development', 'Learned the fundamentals of programming and web development.'], ['2025', 'Built CognitoFlow', 'Combined full-stack engineering with AI-powered GitHub workflows.'], ['2026', 'Built Lexis', 'Explored LLMs, retrieval and Graph RAG through a legal-tech project.']].map(([year, title, description]) => <div key={year} className="border p-4 transition-colors hover:border-[var(--accent)]" style={{ borderColor: 'var(--border)' }}><span className={`text-lg font-bold text-[var(--accent)] ${mono}`}>{year}</span><h4 className="mt-3 text-sm font-semibold text-[var(--text)]">{title}</h4><p className="mt-2 text-xs leading-relaxed text-[var(--muted)]">{description}</p></div>)}
             </div>
           </section>
 
@@ -67,7 +72,12 @@ export function AboutView() {
           </section>
 
           <section className="grid gap-5 border-t pt-8 sm:grid-cols-2" style={{ borderColor: 'var(--border)' }}>
-            <div className="border p-5" style={{ borderColor: 'var(--border)' }}><Telescope size={20} className="mb-3 text-[var(--accent)]" /><SectionTitle>BEYOND CODE</SectionTitle><p className="text-sm leading-relaxed text-[var(--muted)]">When I’m away from the terminal, I’m usually exploring astronomy, planning long-distance motorcycle trips, or looking for the next trail to trek.</p></div>
+            <div className="border p-5" style={{ borderColor: 'var(--border)' }}>
+              <Telescope size={20} className="mb-3 text-[var(--accent)]" />
+              <SectionTitle>BEYOND CODE</SectionTitle>
+              <p className="text-sm leading-relaxed text-[var(--muted)]">Outside development, I enjoy watching movies and reading books — activities that help me explore different perspectives, improve my communication, and keep learning beyond technology.
+              </p>
+            </div>
             <div className="border p-5" style={{ borderColor: 'var(--border)' }}><MapPin size={20} className="mb-3 text-[var(--accent)]" /><SectionTitle>OPEN TO</SectionTitle><p className="text-sm leading-relaxed text-[var(--muted)]">Full-stack development, AI engineering, and opportunities where I can build, learn, and solve interesting problems.</p></div>
           </section>
 
